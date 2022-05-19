@@ -10,3 +10,11 @@ def print_symbol():
 
 
 print_symbol()
+
+
+def str_size():
+    my_str = input('Введите строку: ')
+    print(f'{my_str} > 10 символов!' if len(my_str) > 10 else my_str + (10 - len(my_str)) * '*')
+
+
+str_size()
