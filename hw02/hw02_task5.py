@@ -24,9 +24,11 @@ str_size()
 
 # 5.3
 def my_min_max(floats: list):
-    for i in range(len(floats) - 1):
-        min_float = floats[i] if floats[i] < floats[i + 1] else floats[i + 1]
-        max_float = floats[i] if floats[i] > floats[i + 1] else floats[i + 1]
+    min_float = floats[0]
+    max_float = floats[0]
+    for i in range(1, len(floats)):
+        min_float = min_float if min_float < floats[i] else floats[i]
+        max_float = max_float if max_float > floats[i] else floats[i]
     return round(min_float, 2), round(max_float, 2)
 
 
