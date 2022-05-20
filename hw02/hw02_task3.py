@@ -11,7 +11,7 @@ def inf_multi():
     while num != 0:
         multi *= num
         num = int(input('Введите число: '))
-    return multi if num != 0 else 0
+    return multi if num != 0 else (0 if multi == 1 else multi)
 
 
 print(inf_multi())
