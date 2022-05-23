@@ -8,10 +8,12 @@ print(str_conc())
 def inf_multi():
     multi = 1
     num = int(input('Введите число: '))
+    count = 0
     while num != 0:
+        count += 1
         multi *= num
         num = int(input('Введите число: '))
-    return multi if num != 0 else (0 if multi == 1 else multi)
+    return multi if num else (multi if count else 0)
 
 
 print(inf_multi())
