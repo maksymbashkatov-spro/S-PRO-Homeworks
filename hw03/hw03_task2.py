@@ -4,7 +4,7 @@ class Point2D:
     def __init__(self, x, y):
         self.__x = x
         self.__y = y
-        Point2D.__point_counter += 1
+        self.__class__.__point_counter += 1
 
     @staticmethod
     def get_point_counter():

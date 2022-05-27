@@ -34,24 +34,16 @@ class FractionMixin:
 
 
 class Fraction(FractionMixin):
-    def __init__(self, num, den):
-        try:
-            self.__num = int(f'{num}')
-        except ValueError:
-            print(f'{num} не является целым числом.')
-
-        try:
-            self.__den = int(f'{den}')
-        except ValueError:
-            print(f'{den} не является целым числом.')
-
     @property
     def num(self):
         return self.__num
 
     @num.setter
     def num(self, num):
-        self.__num = num
+        try:
+            self.__num = int(f'{num}')
+        except ValueError:
+            print(f'{num} не является целым числом.')
 
     @property
     def den(self):
@@ -59,7 +51,14 @@ class Fraction(FractionMixin):
 
     @den.setter
     def den(self, den):
-        self.__den = den
+        try:
+            self.__den = int(f'{den}')
+        except ValueError:
+            print(f'{den} не является целым числом.')
+
+    def __init__(self, num, den):
+        self.num = num
+        self.den = den
 
     def __add_sub_pattern(self, f2, sign):
         """
