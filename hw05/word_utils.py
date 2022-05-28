@@ -1,5 +1,5 @@
 def str_without_punctuation(user_str):
-    return ''.join(i for i in user_str if i.isalpha() or i == ' ')
+    return ''.join(i for i in user_str if i.isalpha() or i.isnumeric() or i == ' ')
 
 
 def get_list_of_words(user_str):
