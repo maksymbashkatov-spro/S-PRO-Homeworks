@@ -46,7 +46,7 @@ class Point3D(Point2D):
     def distance(self, point3d):
         return round(((self.x - point3d.x) ** 2 +
                       (self.y - point3d.y) ** 2 +
-                      (self.__z - point3d.z) ** 2) ** 0.5, 3)
+                      (self.z - point3d.z) ** 2) ** 0.5, 3)
 
 
 print('Тестирование в 2х мерном пространстве.')
